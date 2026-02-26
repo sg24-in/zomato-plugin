@@ -1,0 +1,13 @@
+build/
+.gradle/
+*.class
+*.jar
+*.war
+*.log
+*.iml
+.idea/
+*.swp
+*~
+zomato-session.json
+test-zomato-session.json
+test-session.json

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.zomato.plugin.entity.ConnectionConfigTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-02-26T13:26:41.778Z" hostname="runsc" time="0.009">
-  <properties/>
-  <testcase name="shouldCreateConnectionConfigWithDefaults()" classname="com.zomato.plugin.entity.ConnectionConfigTest" time="0.005"/>
-  <testcase name="shouldCreateConnectionConfigWithAllFields()" classname="com.zomato.plugin.entity.ConnectionConfigTest" time="0.001"/>
-  <testcase name="shouldUpdateConnectionStatus()" classname="com.zomato.plugin.entity.ConnectionConfigTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -305,6 +305,59 @@ Provide runnable minimal implementation.
 
 ---
 
+# How to Build & Run
+
+## Prerequisites
+
+- Java 17+
+- Gradle 8+
+- Chromium browser (installed via Playwright)
+
+## Build the JAR
+
+```bash
+gradle bootJar
+```
+
+The executable JAR will be at: `build/libs/zomato-plugin-0.0.1-SNAPSHOT.jar`
+
+## Install Playwright Browsers (first time only)
+
+```bash
+npx playwright install chromium
+```
+
+## Run the Application
+
+```bash
+java -jar build/libs/zomato-plugin-0.0.1-SNAPSHOT.jar
+```
+
+The app starts on **http://localhost:8080**.
+
+## Usage
+
+1. Open **http://localhost:8080/login**
+2. Enter any email and password (e.g. `test@example.com` / `password123`)
+3. Click **Connect** — redirects to `/orders`
+4. Live orders appear automatically (polled every 3 seconds)
+
+## Run Tests
+
+```bash
+# Unit + integration tests (with coverage)
+gradle test
+
+# E2E tests (Playwright)
+gradle e2eTest
+
+# Coverage report
+gradle jacocoTestReport
+# Open build/reports/jacoco/test/html/index.html
+```
+
+---
+
 # End Goal
 
 This POC must demonstrate:

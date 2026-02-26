@@ -319,6 +319,3 @@ This POC must demonstrate:
 
 If needed, assume Zomato partner portal URL:
 https://www.zomato.com/partners
-https://www.zomato.com/partners
-
-[https://partner.zomato.com](ht

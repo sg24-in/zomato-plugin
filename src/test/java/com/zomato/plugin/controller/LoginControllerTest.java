@@ -9,6 +9,11 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.zomato.plugin.entity.Order;
+import org.mockito.ArgumentCaptor;
+
+import java.util.function.Consumer;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
@@ -80,6 +85,26 @@ class LoginControllerTest {
         verify(connectionService).connect("testuser", "/tmp/session.json");
         verify(playwrightService).setOrderCallback(any());
         verify(playwrightService).startListening();
+    }
+
+    @SuppressWarnings("unchecked")
+    @Test
+    void shouldSetOrderCallbackThatSavesOrders() throws Exception {
+        when(playwrightService.login("testuser", "testpass")).thenReturn("/tmp/session.json");
+
+        mockMvc.perform(post("/connect")
+                .param("username", "testuser")
+                .param("password", "testpass"));
+
+        ArgumentCaptor<Consumer<Order>> callbackCaptor = ArgumentCaptor.forClass(Consumer.class);
+        verify(playwrightService).setOrderCallback(callbackCaptor.capture());
+
+        // Exercise the captured lambda
+        Order order = new Order();
+        order.setOrderId("TEST-001");
+        callbackCaptor.getValue().accept(order);
+
+        verify(orderService).saveOrder(order);
     }
 
     @Test

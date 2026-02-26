@@ -143,6 +143,35 @@ class PlaywrightServiceTest {
     }
 
     @Test
+    void loginShouldReturnSessionFilePath() {
+        assertThat(playwrightService.login("user@example.com", "password123"))
+                .isEqualTo("test-session.json");
+    }
+
+    @Test
+    void extractJsonFieldShouldReturnNullForNonStringNonNumericValue() {
+        // Value starts with 't' (boolean true) which is neither quoted string nor digit
+        String json = "{\"active\":true}";
+
+        assertThat(playwrightService.extractJsonField(json, "active")).isNull();
+    }
+
+    @Test
+    void extractJsonFieldShouldReturnNullWhenValueStartsAfterEnd() {
+        // Field with colon but nothing after it
+        String json = "{\"key\":}";
+
+        assertThat(playwrightService.extractJsonField(json, "key")).isNull();
+    }
+
+    @Test
+    void extractJsonFieldShouldHandleNoColonAfterField() {
+        String json = "{\"key\"}";
+
+        assertThat(playwrightService.extractJsonField(json, "key")).isNull();
+    }
+
+    @Test
     void cleanupShouldStopListening() {
         playwrightService.startListening();
         assertThat(playwrightService.isListening()).isTrue();

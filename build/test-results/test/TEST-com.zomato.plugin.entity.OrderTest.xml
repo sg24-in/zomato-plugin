@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.zomato.plugin.entity.OrderTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-02-26T13:26:41.789Z" hostname="runsc" time="0.004">
+  <properties/>
+  <testcase name="shouldCreateOrderWithDefaults()" classname="com.zomato.plugin.entity.OrderTest" time="0.0"/>
+  <testcase name="shouldUpdateOrderStatus()" classname="com.zomato.plugin.entity.OrderTest" time="0.001"/>
+  <testcase name="shouldCreateOrderWithAllFields()" classname="com.zomato.plugin.entity.OrderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

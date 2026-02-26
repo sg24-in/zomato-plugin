@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.zomato.plugin.controller.LoginControllerTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-02-26T13:26:38.264Z" hostname="runsc" time="1.801">
+  <properties/>
+  <testcase name="shouldRedirectToLoginWithErrorWhenDisconnectFails()" classname="com.zomato.plugin.controller.LoginControllerTest" time="0.621"/>
+  <testcase name="shouldRedirectToLoginWithErrorOnConnectFailure()" classname="com.zomato.plugin.controller.LoginControllerTest" time="0.017"/>
+  <testcase name="shouldReturnLoginViewWithConnectedFalse()" classname="com.zomato.plugin.controller.LoginControllerTest" time="1.05"/>
+  <testcase name="shouldRedirectToOrdersOnSuccessfulConnect()" classname="com.zomato.plugin.controller.LoginControllerTest" time="0.011"/>
+  <testcase name="shouldCallServicesInOrderOnConnect()" classname="com.zomato.plugin.controller.LoginControllerTest" time="0.04"/>
+  <testcase name="shouldRedirectToLoginWithSuccessMessageOnDisconnect()" classname="com.zomato.plugin.controller.LoginControllerTest" time="0.01"/>
+  <testcase name="shouldReturnLoginViewWithConnectedTrueWhenConnected()" classname="com.zomato.plugin.controller.LoginControllerTest" time="0.022"/>
+  <system-out><![CDATA[2026-02-26T13:26:36.508Z  INFO 22367 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.zomato.plugin.controller.LoginControllerTest]: LoginControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-26T13:26:36.577Z  INFO 22367 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.zomato.plugin.ZomatoPluginApplication for test class com.zomato.plugin.controller.LoginControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-02-26T13:26:36.650Z  INFO 22367 --- [    Test worker] c.z.p.controller.LoginControllerTest     : Starting LoginControllerTest using Java 21.0.10 with PID 22367 (started by root in /home/user/zomato-plugin)
+2026-02-26T13:26:36.651Z  INFO 22367 --- [    Test worker] c.z.p.controller.LoginControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-26T13:26:38.175Z  INFO 22367 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-26T13:26:38.175Z  INFO 22367 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-26T13:26:38.183Z  INFO 22367 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-02-26T13:26:38.215Z  INFO 22367 --- [    Test worker] c.z.p.controller.LoginControllerTest     : Started LoginControllerTest in 1.631 seconds (process running for 20.852)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

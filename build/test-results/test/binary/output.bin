@@ -1,0 +1,314 @@
+g13:26:20.768 [Test worker] INFO com.zomato.plugin.service.PlaywrightService -- Started order listening
+g13:26:20.794 [Test worker] INFO com.zomato.plugin.service.PlaywrightService -- Started order listening
+	g13:26:20.798 [Test worker] INFO com.zomato.plugin.service.PlaywrightService -- Started order listening
+	g13:26:20.798 [Test worker] INFO com.zomato.plugin.service.PlaywrightService -- Stopped order listening
+	l13:26:20.799 [Test worker] INFO com.zomato.plugin.service.PlaywrightService -- PlaywrightService cleaned up
+
+q13:26:20.809 [Test worker] ERROR com.zomato.plugin.service.PlaywrightService -- Failed to parse order JSON: null
+
+^java.lang.NullPointerException: Cannot invoke "String.indexOf(String)" because "json" is null
+
+]	at com.zomato.plugin.service.PlaywrightService.extractJsonField(PlaywrightService.java:102)
+
+^	at com.zomato.plugin.service.PlaywrightService.parseOrderFromJson(PlaywrightService.java:84)
+
+Ç	at com.zomato.plugin.service.PlaywrightServiceTest.parseOrderFromJsonShouldReturnNullOnException(PlaywrightServiceTest.java:117)
+
+j	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+?	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+
+[	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+
+Z	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+
+Ñ	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+
+]	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+
+k	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+
+f	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+
+ù	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+
+|	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+
+Ö	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+
+n	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+
+u	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+
+m	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+
+s	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+
+s	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+
+~	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+
+j	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+
+u	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+
+l	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+
+k	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+
+s	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+
+j	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+
+s	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+
+N	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+
+s	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+
+j	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+
+j	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+
+^	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+
+?	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+ö	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+
+s	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+
+j	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+
+s	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+
+N	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+
+s	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+
+j	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+
+j	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+
+^	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+
+?	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+ö	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+
+s	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+
+j	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+
+s	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+
+N	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+
+s	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+
+j	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+
+j	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+
+^	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+
+ó	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+
+v	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+
+r	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+
+o	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+
+n	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+
+w	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+
+}	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+
+n	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+
+W	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+
+V	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+
+w	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+
+∂	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+
+™	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+
+Ü	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+
+h	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+
+j	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+?	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+
+Y	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+
+Y	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+
+i	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+
+x	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+
+7	at jdk.proxy2/jdk.proxy2.$Proxy6.stop(Unknown Source)
+
+W	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+
+n	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+
+Y	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+
+X	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+
+j	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+
+Ç	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+
+Å	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+
+]	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+
+^	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+g13:26:20.844 [Test worker] INFO com.zomato.plugin.service.PlaywrightService -- Started order listening
+g13:26:20.844 [Test worker] INFO com.zomato.plugin.service.PlaywrightService -- Stopped order listening
+ ›13:26:21.219 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.zomato.plugin.ZomatoPluginApplicationTest]: ZomatoPluginApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+ Ò13:26:21.593 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.zomato.plugin.ZomatoPluginApplication for test class com.zomato.plugin.ZomatoPluginApplicationTest
+ 
+ (  .   ____          _            __ _ _
+ ) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ *( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ + \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ *  '  |____| .__|_| |_|_| |_\__, | / / / /
+ ) =========|_|==============|___/=/_/_/_/
+ + :: Spring Boot ::                (v3.2.5)
+ 
+ €2026-02-26T13:26:23.318Z  INFO 22367 --- [    Test worker] c.z.plugin.ZomatoPluginApplicationTest   : Starting ZomatoPluginApplicationTest using Java 21.0.10 with PID 22367 (started by root in /home/user/zomato-plugin)
+ ™2026-02-26T13:26:23.327Z  INFO 22367 --- [    Test worker] c.z.plugin.ZomatoPluginApplicationTest   : No active profile set, falling back to 1 default profile: "default"
+ ¢2026-02-26T13:26:25.462Z  INFO 22367 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ Ω2026-02-26T13:26:25.664Z  INFO 22367 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175 ms. Found 2 JPA repository interfaces.
+ †2026-02-26T13:26:27.008Z  INFO 22367 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+ ò2026-02-26T13:26:27.301Z  INFO 22367 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+ ç2026-02-26T13:26:27.454Z  INFO 22367 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+ û2026-02-26T13:26:28.465Z  INFO 22367 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+ Å2026-02-26T13:26:28.582Z  INFO 22367 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+ ¨2026-02-26T13:26:29.361Z  INFO 22367 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+ Ü2026-02-26T13:26:29.367Z  INFO 22367 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+ Å2026-02-26T13:26:29.460Z  WARN 22367 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+ Ÿ2026-02-26T13:26:32.783Z  INFO 22367 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ ™2026-02-26T13:26:32.923Z  INFO 22367 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ û2026-02-26T13:26:34.064Z  WARN 22367 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ π2026-02-26T13:26:35.258Z  INFO 22367 --- [    Test worker] c.z.plugin.ZomatoPluginApplicationTest   : Started ZomatoPluginApplicationTest in 13.004 seconds (process running for 17.895)
+  WARNING: A Java agent has been loaded dynamically (/root/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.13/979ce25f7d3096a2e82214ba7dc972a05ce7a171/byte-buddy-agent-1.14.13.jar)
+ qWARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+ rWARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+ UWARNING: Dynamic loading of agents will be disallowed by default in a future release
+ œ2026-02-26T13:26:36.508Z  INFO 22367 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.zomato.plugin.controller.LoginControllerTest]: LoginControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+ Ô2026-02-26T13:26:36.577Z  INFO 22367 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.zomato.plugin.ZomatoPluginApplication for test class com.zomato.plugin.controller.LoginControllerTest
+ 
+ (  .   ____          _            __ _ _
+ ) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ *( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ + \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ *  '  |____| .__|_| |_|_| |_\__, | / / / /
+ ) =========|_|==============|___/=/_/_/_/
+ + :: Spring Boot ::                (v3.2.5)
+ 
+ ”2026-02-26T13:26:36.650Z  INFO 22367 --- [    Test worker] c.z.p.controller.LoginControllerTest     : Starting LoginControllerTest using Java 21.0.10 with PID 22367 (started by root in /home/user/zomato-plugin)
+ ™2026-02-26T13:26:36.651Z  INFO 22367 --- [    Test worker] c.z.p.controller.LoginControllerTest     : No active profile set, falling back to 1 default profile: "default"
+ ì2026-02-26T13:26:38.175Z  INFO 22367 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+ ~2026-02-26T13:26:38.175Z  INFO 22367 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+ á2026-02-26T13:26:38.183Z  INFO 22367 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+ ∞2026-02-26T13:26:38.215Z  INFO 22367 --- [    Test worker] c.z.p.controller.LoginControllerTest     : Started LoginControllerTest in 1.631 seconds (process running for 20.852)
+ ’2026-02-26T13:26:40.083Z  INFO 22367 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.zomato.plugin.controller.OrderApiControllerTest]: OrderApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+ Ú2026-02-26T13:26:40.117Z  INFO 22367 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.zomato.plugin.ZomatoPluginApplication for test class com.zomato.plugin.controller.OrderApiControllerTest
+ 
+ (  .   ____          _            __ _ _
+ ) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ *( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ + \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ *  '  |____| .__|_| |_|_| |_\__, | / / / /
+ ) =========|_|==============|___/=/_/_/_/
+ + :: Spring Boot ::                (v3.2.5)
+ 
+ ÷2026-02-26T13:26:40.219Z  INFO 22367 --- [    Test worker] c.z.p.controller.OrderApiControllerTest  : Starting OrderApiControllerTest using Java 21.0.10 with PID 22367 (started by root in /home/user/zomato-plugin)
+ ™2026-02-26T13:26:40.220Z  INFO 22367 --- [    Test worker] c.z.p.controller.OrderApiControllerTest  : No active profile set, falling back to 1 default profile: "default"
+ ì2026-02-26T13:26:40.755Z  INFO 22367 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+ ~2026-02-26T13:26:40.755Z  INFO 22367 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+ á2026-02-26T13:26:40.756Z  INFO 22367 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+ ∞2026-02-26T13:26:40.763Z  INFO 22367 --- [    Test worker] c.z.p.controller.OrderApiControllerTest  : Started OrderApiControllerTest in 0.64 seconds (process running for 23.4)
+  œ2026-02-26T13:26:41.190Z  INFO 22367 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.zomato.plugin.controller.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+  Ô2026-02-26T13:26:41.209Z  INFO 22367 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.zomato.plugin.ZomatoPluginApplication for test class com.zomato.plugin.controller.OrderControllerTest
+  
+  (  .   ____          _            __ _ _
+  ) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+  *( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+  + \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  *  '  |____| .__|_| |_|_| |_\__, | / / / /
+  ) =========|_|==============|___/=/_/_/_/
+  + :: Spring Boot ::                (v3.2.5)
+  
+  ”2026-02-26T13:26:41.268Z  INFO 22367 --- [    Test worker] c.z.p.controller.OrderControllerTest     : Starting OrderControllerTest using Java 21.0.10 with PID 22367 (started by root in /home/user/zomato-plugin)
+  ™2026-02-26T13:26:41.269Z  INFO 22367 --- [    Test worker] c.z.p.controller.OrderControllerTest     : No active profile set, falling back to 1 default profile: "default"
+  ì2026-02-26T13:26:41.630Z  INFO 22367 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+  ~2026-02-26T13:26:41.630Z  INFO 22367 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+  á2026-02-26T13:26:41.631Z  INFO 22367 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+  ∞2026-02-26T13:26:41.636Z  INFO 22367 --- [    Test worker] c.z.p.controller.OrderControllerTest     : Started OrderControllerTest in 0.423 seconds (process running for 24.273)
+, Â2026-02-26T13:26:41.799Z  INFO 22367 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.zomato.plugin.repository.ConnectionConfigRepositoryTest]: ConnectionConfigRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+, ˙2026-02-26T13:26:41.857Z  INFO 22367 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.zomato.plugin.ZomatoPluginApplication for test class com.zomato.plugin.repository.ConnectionConfigRepositoryTest
+, 
+, (  .   ____          _            __ _ _
+, ) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+, *( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+, + \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+, *  '  |____| .__|_| |_|_| |_\__, | / / / /
+, ) =========|_|==============|___/=/_/_/_/
+, + :: Spring Boot ::                (v3.2.5)
+, 
+, ﬁ2026-02-26T13:26:41.912Z  INFO 22367 --- [    Test worker] c.z.p.r.ConnectionConfigRepositoryTest   : Starting ConnectionConfigRepositoryTest using Java 21.0.10 with PID 22367 (started by root in /home/user/zomato-plugin)
+, ™2026-02-26T13:26:41.912Z  INFO 22367 --- [    Test worker] c.z.p.r.ConnectionConfigRepositoryTest   : No active profile set, falling back to 1 default profile: "default"
+, ¢2026-02-26T13:26:42.095Z  INFO 22367 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+, º2026-02-26T13:26:42.138Z  INFO 22367 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+, £2026-02-26T13:26:42.154Z  INFO 22367 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+, Ò2026-02-26T13:26:42.213Z  INFO 22367 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:4cdcf873-ddf5-4414-8609-08af6b66179d;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+, †2026-02-26T13:26:42.275Z  INFO 22367 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+, ç2026-02-26T13:26:42.300Z  INFO 22367 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+, û2026-02-26T13:26:42.335Z  INFO 22367 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+, Å2026-02-26T13:26:42.344Z  WARN 22367 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+, Ÿ2026-02-26T13:26:42.493Z  INFO 22367 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+, ;Hibernate: drop table if exists connection_config cascade 
+, 0Hibernate: drop table if exists orders cascade 
+, “Hibernate: create table connection_config (connected boolean not null, connected_at timestamp(6), id bigint generated by default as identity, session_path varchar(255), username varchar(255), primary key (id))
+, ÒHibernate: create table orders (total_amount numeric(38,2), id bigint generated by default as identity, order_time timestamp(6), customer_name varchar(255), order_id varchar(255) unique, status varchar(255), raw_json clob, primary key (id))
+, ™2026-02-26T13:26:42.505Z  INFO 22367 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+, ª2026-02-26T13:26:42.579Z  INFO 22367 --- [    Test worker] c.z.p.r.ConnectionConfigRepositoryTest   : Started ConnectionConfigRepositoryTest in 0.717 seconds (process running for 25.216)
+,-tHibernate: insert into connection_config (connected,connected_at,session_path,username,id) values (?,?,?,?,default)
+,-tHibernate: insert into connection_config (connected,connected_at,session_path,username,id) values (?,?,?,?,default)
+,-´Hibernate: select cc1_0.id,cc1_0.connected,cc1_0.connected_at,cc1_0.session_path,cc1_0.username from connection_config cc1_0 where cc1_0.connected fetch first ? rows only
+,.îHibernate: select cc1_0.id,cc1_0.connected,cc1_0.connected_at,cc1_0.session_path,cc1_0.username from connection_config cc1_0 where cc1_0.username=?
+,/tHibernate: insert into connection_config (connected,connected_at,session_path,username,id) values (?,?,?,?,default)
+,/tHibernate: insert into connection_config (connected,connected_at,session_path,username,id) values (?,?,?,?,default)
+,/´Hibernate: select cc1_0.id,cc1_0.connected,cc1_0.connected_at,cc1_0.session_path,cc1_0.username from connection_config cc1_0 where cc1_0.connected fetch first ? rows only
+,0tHibernate: insert into connection_config (connected,connected_at,session_path,username,id) values (?,?,?,?,default)
+,0îHibernate: select cc1_0.id,cc1_0.connected,cc1_0.connected_at,cc1_0.session_path,cc1_0.username from connection_config cc1_0 where cc1_0.username=?
+,1tHibernate: insert into connection_config (connected,connected_at,session_path,username,id) values (?,?,?,?,default)
+2 œ2026-02-26T13:26:43.249Z  INFO 22367 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.zomato.plugin.repository.OrderRepositoryTest]: OrderRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2 Ô2026-02-26T13:26:43.282Z  INFO 22367 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.zomato.plugin.ZomatoPluginApplication for test class com.zomato.plugin.repository.OrderRepositoryTest
+23Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+23ûHibernate: select o1_0.id,o1_0.customer_name,o1_0.order_id,o1_0.order_time,o1_0.raw_json,o1_0.status,o1_0.total_amount from orders o1_0 where o1_0.order_id=?
+24Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+24Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+24Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+24¶Hibernate: select o1_0.id,o1_0.customer_name,o1_0.order_id,o1_0.order_time,o1_0.raw_json,o1_0.status,o1_0.total_amount from orders o1_0 order by o1_0.order_time desc
+25Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+25Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+25à2026-02-26T13:26:43.374Z  WARN 22367 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+25˝2026-02-26T13:26:43.375Z ERROR 22367 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_8 ON PUBLIC.ORDERS(ORDER_ID NULLS FIRST) VALUES ( /* 5 */ 'ORD-DUP' )"; SQL statement:
+25Äinsert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default) [23505-224]
+26Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+27YHibernate: select o1_0.id from orders o1_0 where o1_0.order_id=? fetch first ? rows only
+28Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+28YHibernate: select o1_0.id from orders o1_0 where o1_0.order_id=? fetch first ? rows only

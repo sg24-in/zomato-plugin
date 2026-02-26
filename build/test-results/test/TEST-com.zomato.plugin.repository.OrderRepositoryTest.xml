@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.zomato.plugin.repository.OrderRepositoryTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-02-26T13:26:43.285Z" hostname="runsc" time="0.171">
+  <properties/>
+  <testcase name="shouldFindByOrderId()" classname="com.zomato.plugin.repository.OrderRepositoryTest" time="0.02"/>
+  <testcase name="shouldFindAllOrderedByOrderTimeDesc()" classname="com.zomato.plugin.repository.OrderRepositoryTest" time="0.042"/>
+  <testcase name="shouldThrowExceptionWhenDuplicateOrderId()" classname="com.zomato.plugin.repository.OrderRepositoryTest" time="0.054"/>
+  <testcase name="shouldSaveAndFindById()" classname="com.zomato.plugin.repository.OrderRepositoryTest" time="0.017"/>
+  <testcase name="shouldReturnFalseWhenOrderIdDoesNotExist()" classname="com.zomato.plugin.repository.OrderRepositoryTest" time="0.016"/>
+  <testcase name="shouldReturnTrueWhenOrderIdExists()" classname="com.zomato.plugin.repository.OrderRepositoryTest" time="0.015"/>
+  <system-out><![CDATA[2026-02-26T13:26:43.249Z  INFO 22367 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.zomato.plugin.repository.OrderRepositoryTest]: OrderRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-26T13:26:43.282Z  INFO 22367 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.zomato.plugin.ZomatoPluginApplication for test class com.zomato.plugin.repository.OrderRepositoryTest
+Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+Hibernate: select o1_0.id,o1_0.customer_name,o1_0.order_id,o1_0.order_time,o1_0.raw_json,o1_0.status,o1_0.total_amount from orders o1_0 where o1_0.order_id=?
+Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+Hibernate: select o1_0.id,o1_0.customer_name,o1_0.order_id,o1_0.order_time,o1_0.raw_json,o1_0.status,o1_0.total_amount from orders o1_0 order by o1_0.order_time desc
+Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+2026-02-26T13:26:43.374Z  WARN 22367 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2026-02-26T13:26:43.375Z ERROR 22367 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_8 ON PUBLIC.ORDERS(ORDER_ID NULLS FIRST) VALUES ( /* 5 */ 'ORD-DUP' )"; SQL statement:
+insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default) [23505-224]
+Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+Hibernate: select o1_0.id from orders o1_0 where o1_0.order_id=? fetch first ? rows only
+Hibernate: insert into orders (customer_name,order_id,order_time,raw_json,status,total_amount,id) values (?,?,?,?,?,?,default)
+Hibernate: select o1_0.id from orders o1_0 where o1_0.order_id=? fetch first ? rows only
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

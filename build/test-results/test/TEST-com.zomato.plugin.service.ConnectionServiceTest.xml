@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.zomato.plugin.service.ConnectionServiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-02-26T13:26:43.474Z" hostname="runsc" time="0.355">
+  <properties/>
+  <testcase name="isConnectedShouldReturnFalseWhenNoActiveConnection()" classname="com.zomato.plugin.service.ConnectionServiceTest" time="0.32"/>
+  <testcase name="connectShouldCreateNewConnectionWhenUsernameNotFound()" classname="com.zomato.plugin.service.ConnectionServiceTest" time="0.006"/>
+  <testcase name="getConnectionByUsernameShouldDelegateToRepository()" classname="com.zomato.plugin.service.ConnectionServiceTest" time="0.003"/>
+  <testcase name="disconnectShouldSetConnectedToFalse()" classname="com.zomato.plugin.service.ConnectionServiceTest" time="0.003"/>
+  <testcase name="getActiveConnectionShouldDelegateToRepository()" classname="com.zomato.plugin.service.ConnectionServiceTest" time="0.002"/>
+  <testcase name="connectShouldUpdateExistingConnection()" classname="com.zomato.plugin.service.ConnectionServiceTest" time="0.008"/>
+  <testcase name="disconnectShouldThrowWhenUsernameNotFound()" classname="com.zomato.plugin.service.ConnectionServiceTest" time="0.006"/>
+  <testcase name="isConnectedShouldReturnTrueWhenActiveConnectionExists()" classname="com.zomato.plugin.service.ConnectionServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

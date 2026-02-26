@@ -103,19 +103,23 @@ public class PlaywrightService {
         if (idx < 0) return null;
         int colonIdx = json.indexOf(':', idx + pattern.length());
         if (colonIdx < 0) return null;
-        int start = json.indexOf('"', colonIdx + 1);
-        if (start < 0) {
-            // Try numeric value
-            int numStart = colonIdx + 1;
-            while (numStart < json.length() && json.charAt(numStart) == ' ') numStart++;
-            int numEnd = numStart;
-            while (numEnd < json.length() && (Character.isDigit(json.charAt(numEnd)) || json.charAt(numEnd) == '.')) numEnd++;
-            if (numEnd > numStart) return json.substring(numStart, numEnd);
-            return null;
+        // Skip whitespace after colon
+        int valueStart = colonIdx + 1;
+        while (valueStart < json.length() && json.charAt(valueStart) == ' ') valueStart++;
+        if (valueStart >= json.length()) return null;
+        char firstChar = json.charAt(valueStart);
+        if (firstChar == '"') {
+            // String value
+            int end = json.indexOf('"', valueStart + 1);
+            if (end < 0) return null;
+            return json.substring(valueStart + 1, end);
+        } else if (Character.isDigit(firstChar) || firstChar == '-') {
+            // Numeric value
+            int numEnd = valueStart;
+            while (numEnd < json.length() && (Character.isDigit(json.charAt(numEnd)) || json.charAt(numEnd) == '.' || json.charAt(numEnd) == '-')) numEnd++;
+            return json.substring(valueStart, numEnd);
         }
-        int end = json.indexOf('"', start + 1);
-        if (end < 0) return null;
-        return json.substring(start + 1, end);
+        return null;
     }
 
     @PreDestroy

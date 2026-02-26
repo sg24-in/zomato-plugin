@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Partner Login</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Zomato Partner Login</h1>
+
+        <div th:if="${message}" class="alert alert-success" th:text="${message}"></div>
+        <div th:if="${error}" class="alert alert-error" th:text="${error}"></div>
+
+        <div th:if="${connected}" class="status connected">
+            <span>Status: Connected</span>
+        </div>
+        <div th:unless="${connected}" class="status disconnected">
+            <span>Status: Not Connected</span>
+        </div>
+
+        <form th:unless="${connected}" th:action="@{/connect}" method="post" id="login-form">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="email" id="username" name="username" required placeholder="partner@example.com">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Connect</button>
+        </form>
+
+        <form th:if="${connected}" th:action="@{/disconnect}" method="post" id="disconnect-form">
+            <input type="hidden" name="username" th:value="${username}">
+            <button type="submit" class="btn btn-danger">Disconnect</button>
+        </form>
+
+        <a th:if="${connected}" th:href="@{/orders}" class="btn btn-link">View Orders</a>
+    </div>
+</body>
+</html>

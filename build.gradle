@@ -1,0 +1,105 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.5'
+    id 'io.spring.dependency-management' version '1.1.5'
+    id 'jacoco'
+}
+
+group = 'com.zomato'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Boot
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Database
+    runtimeOnly 'com.h2database:h2'
+
+    // Playwright
+    implementation 'com.microsoft.playwright:playwright:1.44.0'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Testing
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+}
+
+// Unit tests (exclude e2e)
+tasks.named('test') {
+    useJUnitPlatform()
+    exclude '**/e2e/**'
+    finalizedBy jacocoTestReport
+}
+
+// E2E tests task
+tasks.register('e2eTest', Test) {
+    description = 'Runs E2E tests with Playwright'
+    group = 'verification'
+    useJUnitPlatform()
+    include '**/e2e/**'
+    shouldRunAfter test
+}
+
+// JaCoCo configuration
+jacoco {
+    toolVersion = '0.8.12'
+}
+
+jacocoTestReport {
+    dependsOn test
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                'com/zomato/plugin/ZomatoPluginApplication.class'
+            ])
+        }))
+    }
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+jacocoTestCoverageVerification {
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                'com/zomato/plugin/ZomatoPluginApplication.class'
+            ])
+        }))
+    }
+    violationRules {
+        rule {
+            limit {
+                counter = 'LINE'
+                value = 'COVEREDRATIO'
+                minimum = 0.99
+            }
+        }
+    }
+}
+
+tasks.named('check') {
+    dependsOn jacocoTestCoverageVerification
+}
